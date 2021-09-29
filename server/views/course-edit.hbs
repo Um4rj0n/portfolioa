@@ -1,0 +1,58 @@
+<h1>Редактировать {{course.title}}</h1>
+
+<form action="/edit" method="POST">
+  <div class="input-field">
+    <input
+      value="{{course.title}}"
+      id="title"
+      name="title"
+      type="text"
+      class="validate"
+      required
+    />
+    <label for="title">Название проекта</label>
+    <span class="helper-text" data-error="Введите название проекта"></span>
+  </div>
+
+  <div class="input-field">
+    <input
+      value="{{course.description}}"
+      id="description"
+      name="description"
+      type="text"
+      class="validate"
+      required
+    />
+    <label for="description">Описание проекта</label>
+    <span class="helper-text" data-error="Введите описание проекта"></span>
+  </div>
+  <div class="input-field">
+    <input
+      value="{{course.img}}"
+      id="img"
+      name="img"
+      type="text"
+      class="validate"
+      required
+    />
+    <label for="img">Превью проекта</label>
+    <span class="helper-text" data-error="Введите url превью проекта"></span>
+  </div>
+
+  <div class="input-field">
+    <input
+      value="{{course.link}}"
+      id="link"
+      name="link"
+      type="text"
+      class="validate"
+      required
+    />
+    <label for="link">URL проекта</label>
+    <span class="helper-text" data-error="Введите url проекта"></span>
+  </div>
+
+  <input type="hidden" name="id" value="{{course.id}}" />
+
+  <button type="submit" class="btn btn-primary">Редактировать проекта</button>
+</form>

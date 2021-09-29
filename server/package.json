@@ -1,0 +1,27 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "ser": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run ser\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.2",
+    "nodemon": "^1.18.11"
+  },
+  "proxy": "http://localhost:3000"
+}
