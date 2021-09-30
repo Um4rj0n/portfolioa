@@ -4,7 +4,6 @@ import ReactImageMagnify from 'react-image-magnify';
 import img from '../../Assets/Projects/phot.jpg'
 function Resume() {
   return (
-    <>
       <div className="bigdivresizeimg">
         <ReactImageMagnify {...{
           smallImage: {
@@ -19,7 +18,6 @@ function Resume() {
           }
         }} />
       </div>
-    </>
   );
 }
 
