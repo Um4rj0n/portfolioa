@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const addRoutes = require('./routes/add')
 const coursesRoutes = require('./routes/courses')
-const apiRouter = require('./routes/api')
 const app = express()
 
 const hbs = exphbs.create({
@@ -22,9 +21,8 @@ dotenv.config({path: '/custom/path/to/.env'})
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api', apiRouter)
-app.use('/add', addRoutes)
-app.use('/', coursesRoutes)
+app.use('/admin/add', addRoutes)
+app.use('/admin/', coursesRoutes)
 
 const PORT = process.env.PORT || 3001
 
